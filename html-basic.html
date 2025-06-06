@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>lorem</h1>
     <h2>Lorem,ipsum.</h2>
     <h3>Lorem, ipsum dolor.</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam porro adipisci unde optio sit maxime nihil mollitia consequuntur, enim dolorem explicabo accusantium? Optio nulla atque, ducimus illo aliquam a vitae?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptate nihil dignissimos! Totam, quae. Laudantium impedit vel officia harum debitis ullam reiciendis, itaque ducimus fugiat dolorem quis. Explicabo, non eum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam porro adipisci unde optio sit maxime nihil
+        mollitia consequuntur, enim dolorem explicabo accusantium? Optio nulla atque, ducimus illo aliquam a vitae?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptate nihil dignissimos! Totam, quae.
+        Laudantium impedit vel officia harum debitis ullam reiciendis, itaque ducimus fugiat dolorem quis. Explicabo,
+        non eum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quasi?</p>
     <a target="_blank" href="https://www.jd.com/">在新窗口打开京东</a>
     <a href="mailto:xxxxx@gmail.com">点我发邮件</a>
@@ -18,11 +23,13 @@
     <a href="aaaa" download="aaa.pdf">点我下载文件</a>
     <br>
     <div>
-        <img width="200" height="200" src="https://drscdn.500px.org/photo/229389427/m%3D1170/v2?user_id=7012987&webp=true&sig=196fa0c161aa562478d08571764872f7d69a346c3c0b2e12aa00e2c6414eb28b" alt="葡萄logo">
+        <img width="200" height="200"
+            src="https://drscdn.500px.org/photo/229389427/m%3D1170/v2?user_id=7012987&webp=true&sig=196fa0c161aa562478d08571764872f7d69a346c3c0b2e12aa00e2c6414eb28b"
+            alt="葡萄logo">
     </div>
-    
     <hr>
     <hr>
+    <marquee behavior="" direction="left">piao</marquee>
     <br>
     <div>
         <em>这几种强调</em>
@@ -31,15 +38,13 @@
         <u>这个？</u>
         <i>这个？</i>
     </div>
-    &lt;!--这段注释需要出现在页面里面--&gt;
-
+    &lt;!-- 这段注释需要出现在页面里面 --&gt;
     <p></p>
-
     <p></p>
-
     <pre>      function a() {
         return 8
       }</pre>
+    <p></p>
     <hr>
     <ul>
         <li>小学
@@ -82,7 +87,7 @@
             <dt title="gender">性别</dt>
             <dd>
                 <label><input type="radio" value="male" name="gender">男
-                <label><input type="radio" value="female" name="gender">女
+                    <label><input type="radio" value="female" name="gender">女
             </dd>
             <dt title="age">年龄</dt>
             <dd>
@@ -90,15 +95,15 @@
                     <option value="" hidden>请选择</option>
                     <optgroup label="少年">
                         <option value="1-6">1到6岁</option>
-                        <option value="6-12">6到12岁</option>            
+                        <option value="6-12">6到12岁</option>
                     </optgroup>
-                    <optgroup   label="青年">
+                    <optgroup label="青年">
                         <option value="13-15">13到15岁</option>
                         <option value="16-18">16到18岁</option>
                     </optgroup>
                     <optgroup label="少年">
                         <option value="1-6">1到6岁</option>
-                        <option value="6-12">6到12岁</option>            
+                        <option value="6-12">6到12岁</option>
                     </optgroup>
                 </select>
             </dd>
@@ -117,7 +122,7 @@
             </dd>
             <dt title="selfintroduce">自我介绍</dt>
             <dd>
-                <textarea name="intro" >&lt;/textarea&gt;</textarea>
+                <textarea name="intro" rows="10" cols="30">&lt;/textarea&gt;</textarea>
             </dd>
         </dl>
         <fieldset disabled>
@@ -131,16 +136,51 @@
         <button type="reset">重置</button>
     </form>
     <hr>
-    <br>
-    <br>
-    <br>
+    <table border="1">
+        <colgroup>
+            <col>
+            <col bgcolor="red">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>品名</th>
+                <th>进价</th>
+                <th>出价</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>aaa</th>
+                <td>a</td>
+                <td rowspan="2">a</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <th>a</th>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <th>a</th>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <th>a</th>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+        </tbody>
+    </table>
     <hr>
     <br>
     <hr>
-    <a target="bottom-frame" href="https://www.mi.com/">小米</a>
-    <div></div>
-    <iframe name="bottom-frame" src="https://www.nodejs.org/" frameborder="1"></iframe>
-
+    <a href="https://www.mi.com/index.html" target="frame1">小米</a>
+    <br>
+    <iframe src="https://nodejs.org/en" frameborder="0" name="frame1"></iframe>
     <div>aaa&nbsp;&nbsp;&nbsp;&nbsp;bbbbb</div>
 
     <pre>aaa      bbbbb</pre>
