@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding-left: 0;
+        }
+
+        .menu {
+            background-color: #a4a2a2;
+            color: #ffffff;
+            height: 460px;
+            width: 234px;
+            padding: 20px 0px;
+            box-sizing: border-box;
+            font-size: 14px;
+            position: relative;
+        }
+
+        li.aside {
+            padding-left: 30px;
+            height: 42px;
+            width: 204px;
+            line-height: 42px;
+        }
+
+        li.aside:hover {
+            background-color: #ff6700;
+        }
+
+        li.aside:hover .phone {
+            display: block;
+        }
+
+        div.phone {
+            display: none;
+            position: absolute;
+            width: 530px;
+            height: 458px;
+            top: 0;
+            left: 234px;
+            background-color: #fff;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            border-left: 0;
+        }
+
+        .phone1 {
+            padding: 2px 0;
+            width: 265px;
+            height: 462px;
+        }
+
+        .phone2 {
+            position: absolute;
+            top: 0;
+            left: 265px;
+            padding: 2px 0;
+            width: 265px;
+            height: 462px;
+        }
+
+        .phone li {
+            width: 225px;
+            height: 40px;
+            padding: 18px 20px;
+            line-height: 40px;
+            font-family: Arial, 微软雅黑;
+            color: black;
+        }
+
+        .phone li:hover {
+            color: #ff6700;
+        }
+
+        div.TV {
+            display: none;
+            position: absolute;
+            width: 530px;
+            height: 458px;
+            top: 0;
+            left: 234px;
+            overflow: hidden;
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-left: 0;
+        }
+
+        .TV1 {
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        .TV li {
+            width: 225px;
+            height: 40px;
+            padding: 18px 20px;
+            line-height: 40px;
+            font-family: Arial, 微软雅黑;
+            color: black;
+        }
+
+        .TV2 {
+            position: absolute;
+            top: 0;
+            left: 265px;
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        li.aside:hover .TV {
+            display: block;
+        }
+
+        .TV li:hover {
+            color: #ff6700;
+        }
+
+        div.electric {
+            width: 992px;
+            height: 458px;
+            position: absolute;
+            top: 0;
+            left: 234px;
+            border: 1px solid #e0e0e0;
+            border-left: 0;
+            background-color: #fff;
+            overflow: hidden;
+            display: none;
+        }
+
+        .electric1,
+        .electric2,
+        .electric3,
+        .electric4 {
+            width: 248px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        .electric2 {
+            position: absolute;
+            top: 0;
+            left: 248px;
+        }
+
+        .electric3 {
+            position: absolute;
+            top: 0;
+            left: 496px;
+        }
+
+        .electric4 {
+            position: absolute;
+            top: 0;
+            left: 744px;
+        }
+
+        .electric li {
+            width: 225px;
+            height: 40px;
+            padding: 18px 20px;
+            line-height: 40px;
+            font-family: Arial, 微软雅黑;
+            color: black;
+        }
+
+        li.aside:hover .electric {
+            display: block;
+        }
+
+        .electric li:hover {
+            color: #ff6700;
+        }
+
+        div.laptop {
+            position: absolute;
+            width: 795px;
+            height: 458px;
+            border: 1px solid #e0e0e0;
+            border-left: 0;
+            top: 0;
+            left: 234px;
+            display: none;
+            overflow: hidden;
+            background-color: #fff;
+
+        }
+
+        ul.laptop1 {
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        ul.laptop2 {
+            position: absolute;
+            top: 0;
+            left: 265px;
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        ul.laptop3 {
+            position: absolute;
+            top: 0;
+            left: 530px;
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        .laptop li {
+            width: 225px;
+            height: 40px;
+            padding: 18px 20px;
+            line-height: 40px;
+            font-family: Arial, 微软雅黑;
+            color: black;
+        }
+
+        .aside:hover .laptop {
+            display: block;
+        }
+
+        .laptop li:hover {
+            color: #ff6700;
+        }
+
+        div.outfit {
+            position: absolute;
+            width: 530px;
+            height: 458px;
+            border: 1px solid #e0e0e0;
+            border-left: 0;
+            top: 0;
+            left: 234px;
+            overflow: hidden;
+            background-color: #fff;
+            display: none;
+        }
+
+        ul.outfit1 {
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        ul.outfit2 {
+            position: absolute;
+            top: 0;
+            left: 265px;
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        .outfit li {
+            width: 225px;
+            height: 40px;
+            padding: 18px 20px;
+            line-height: 40px;
+            font-family: Arial, 微软雅黑;
+            color: black;
+        }
+
+        .outfit li:hover {
+            color: #ff6700;
+        }
+
+        li:hover .outfit {
+            display: block;
+        }
+
+        div.voice {
+            position: absolute;
+            width: 992px;
+            height: 458px;
+            border: 1px solid #e0e0e0;
+            border-left: 0;
+            top: 0;
+            left: 234px;
+            overflow: hidden;
+            background-color: #fff;
+            display: none;
+        }
+
+        ul.evoice1 {
+            width: 248px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        ul.voice2 {
+            position: absolute;
+            top: 0;
+            left: 248px;
+            width: 248px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        ul.voice3 {
+            position: absolute;
+            top: 0;
+            left: 496px;
+            width: 248px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        ul.voice4 {
+            position: absolute;
+            top: 0;
+            left: 744px;
+            width: 248px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        .voice li {
+            width: 225px;
+            height: 40px;
+            padding: 18px 20px;
+            line-height: 40px;
+            font-family: Arial, 微软雅黑;
+            color: black;
+        }
+
+        li:hover .voice {
+            display: block;
+        }
+
+        .voice li:hover {
+            color: #ff6700;
+        }
+
+        div.kid {
+            position: absolute;
+            width: 795px;
+            height: 458px;
+            top: 0;
+            left: 234px;
+            border: 1px solid #e0e0e0;
+            border-left: 0;
+            background-color: #fff;
+            overflow: hidden;
+            display: none;
+        }
+
+        ul.kid1 {
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        ul.kid2 {
+            position: absolute;
+            top: 0;
+            left: 265px;
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        ul.kid3 {
+            position: absolute;
+            top: 0;
+            left: 530px;
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        .kid li {
+            width: 225px;
+            height: 40px;
+            padding: 18px 20px;
+            line-height: 40px;
+            font-family: Arial, 微软雅黑;
+            color: black;
+        }
+
+        li:hover .kid {
+            display: block;
+        }
+
+        .kid li:hover {
+            color: #ff6700;
+        }
+
+        div.life {
+            position: absolute;
+            width: 795px;
+            height: 458px;
+            border: 1px solid #e0e0e0;
+            border-left: 0;
+            top: 0;
+            left: 234px;
+            background-color: #fff;
+            overflow: hidden;
+            display: none;
+
+        }
+
+        .life1 {
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        .life2 {
+            position: absolute;
+            top: 0;
+            left: 265px;
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        .life3 {
+            position: absolute;
+            top: 0;
+            left: 530px;
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        .life li {
+            width: 225px;
+            height: 40px;
+            padding: 18px 20px;
+            line-height: 40px;
+            font-family: Arial, 微软雅黑;
+            color: black;
+        }
+
+        li:hover .life {
+            display: block;
+        }
+
+        .life li:hover {
+            color: #ff6700;
+        }
+
+        div.mao {
+            width: 530px;
+            height: 458px;
+            border: 1px solid #e0e0e0;
+            border-left: none;
+            position: absolute;
+            top: 0;
+            left: 234px;
+            background-color: #fff;
+            overflow: hidden;
+            display: none;
+        }
+
+        ul.mao1 {
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        ul.mao2 {
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+            position: absolute;
+            top: 0;
+            left: 265px;
+        }
+
+        .mao li {
+            width: 225px;
+            height: 40px;
+            padding: 18px 20px;
+            line-height: 40px;
+            font-family: Arial, 微软雅黑;
+            color: black;
+        }
+
+        li:hover .mao {
+            display: block;
+        }
+
+        .mao li:hover {
+            color: #ff6700;
+        }
+
+        div.charge {
+            width: 530px;
+            height: 458px;
+            border: 1px solid #e0e0e0;
+            border-left: none;
+            position: absolute;
+            top: 0;
+            left: 234px;
+            overflow: hidden;
+            background-color: #fff;
+            display: none;
+        }
+
+        .charge1 {
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+        }
+
+        .charge2 {
+            width: 265px;
+            height: 458px;
+            padding: 2px 0;
+            position: absolute;
+            top: 0;
+            left: 265px;
+        }
+
+        .charge li {
+            width: 225px;
+            height: 40px;
+            padding: 18px 20px;
+            line-height: 40px;
+            font-family: Arial, 微软雅黑;
+            color: black;
+        }
+
+        li:hover .charge {
+            display: block;
+        }
+
+        .charge li:hover {
+            color: #ff6700;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul class="menu">
+            <li class="aside">手机
+                <div class="phone">
+                    <ul class="phone1">
+                        <li>Xiaomi 数字旗舰</li>
+                        <li>Xiaomi MIX系列</li>
+                        <li>Xiaomi Civi系列</li>
+                        <li>Redmi K系列</li>
+                        <li>Redmi Turbo系列</li>
+                        <li>Redmi Note系列</li>
+                    </ul>
+                    <ul class="phone2">
+                        <li>Redmi 数字系列</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="aside">电视
+                <div class="TV">
+                    <ul class="TV1">
+                        <li>旗舰系列-S Mini LED 2025</li>
+                        <li>旗舰系列-S Pro Mini LED</li>
+                        <li>旗舰系列-S Mini LED</li>
+                        <li>巨幕影院-Redmi MAX</li>
+                        <li>游戏高刷-REDMI X 2025</li>
+                        <li>性价比爆款-Redmi A Pro</li>
+                    </ul>
+                    <ul class="TV2">
+                        <li>性价比爆款-Redmi A 2025</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="aside">家电
+                <div class="electric">
+                    <ul class="electric1">
+                        <li>壁挂空调</li>
+                        <li>立式空调</li>
+                        <li>中央空调Pro</li>
+                        <li>冰箱</li>
+                        <li>滚筒洗衣机</li>
+                        <li>波轮洗衣机</li>
+                    </ul>
+                    <ul class="electric2">
+                        <li>电暖器</li>
+                        <li>除湿机</li>
+                        <li>洗地机</li>
+                        <li>净水器</li>
+                        <li>微蒸烤</li>
+                        <li>烟灶</li>
+                    </ul>
+                    <ul class="electric3">
+                        <li>洗碗机</li>
+                        <li>扫地机器人</li>
+                        <li>吸尘器</li>
+                        <li>加湿器</li>
+                        <li>空气净化器</li>
+                        <li>电饭煲</li>
+                    </ul>
+                    <ul class="electric4">
+                        <li>电磁炉</li>
+                        <li>水壶</li>
+                        <li>落地风扇</li>
+                        <li>投影仪</li>
+                        <li>灯具</li>
+                        <li>除螨仪</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="aside">笔记本 平板 显示器
+                <div class="laptop">
+                    <ul class="laptop1">
+                        <li>Xiaomi Pad 7 Ultra</li>
+                        <li>Xiaomi Pad 7 Pro</li>
+                        <li>Xiaomi Pad 7</li>
+                        <li>REDMI Book 14 锐龙版</li>
+                        <li>REDMI Book Pro 14</li>
+                        <li>REDMI Book Pro 16</li>
+                    </ul>
+                    <ul class="laptop2">
+                        <li>Redmi 平板</li>
+                        <li>Xiaomi 平板</li>
+                        <li>REDMI Book 14 2025</li>
+                        <li>REDMI Book 16 2025</li>
+                        <li>办公娱乐显示器</li>
+                        <li>游戏电竞显示器</li>
+                    </ul>
+                    <ul class="laptop3">
+                        <li>Redmi 显示器 G34WQ</li>
+                        <li>Redmi G Pro27</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="aside">出行 穿戴
+                <div class="outfit">
+                    <ul class="outfit1">
+                        <li>REDMI Watch 5</li>
+                        <li>Xiaomi Watch S4</li>
+                        <li>小米手环9 Pro</li>
+                        <li>Redmi 手环 3</li>
+                        <li>小米手环9</li>
+                        <li>小米手环9 NFC</li>
+                    </ul>
+                    <ul class="outfit2">
+                        <li>Xiaomi Watch S4Sport</li>
+                        <li>小米手环8 Pro 原神定制版</li>
+                        <li>小米车载充电器快充版1A1C 100W</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="aside">耳机 音箱
+                <div class="voice">
+                    <ul class="voice1">
+                        <li>Xiaomi 开放式耳机 Pro</li>
+                        <li>Xiaomi Buds 5 Pro</li>
+                        <li>REDMI Buds 6 Pro</li>
+                        <li>REDMI Buds 6 青春版</li>
+                        <li>REDMI Buds 6</li>
+                        <li>Xiaomi Buds 5</li>
+                    </ul>
+                    <ul class="voice2">
+                        <li>REDMI Buds 7S</li>
+                        <li>REDMI Buds 6 活力版</li>
+                        <li>Xiaomi Sound Pro</li>
+                        <li>小米小爱音箱 Play</li>
+                        <li>小米小爱触屏音箱Pro 8</li>
+                        <li>Xiaomi 蓝牙音箱 Mini</li>
+                    </ul>
+                    <ul class="voice3">
+                        <li>Xiaomi智能家庭屏Pro 8</li>
+                        <li>Xiaomi智能家庭屏 6</li>
+                        <li>Xiaomi Sound</li>
+                        <li>Xiaomi智能家庭屏 10</li>
+                        <li>小爱音箱 Pro</li>
+                        <li>小爱音箱Play 增强版</li>
+                    </ul>
+                    <ul class="voice4">
+                        <li>小米AI音箱</li>
+                        <li>Xiaomi 胶囊耳机</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="aside">健康 儿童
+                <div class="kid">
+                    <ul class="kid1">
+                        <li>洗手机</li>
+                        <li>剃须刀</li>
+                        <li>修剪器</li>
+                        <li>牙刷</li>
+                        <li>吹风机</li>
+                        <li>体重称</li>
+                    </ul>
+                    <ul class="kid2">
+                        <li>体脂称</li>
+                        <li>米家跑步机</li>
+                        <li>米家动感单车</li>
+                        <li>走步机</li>
+                        <li>益智积木</li>
+                        <li>儿童手表</li>
+                    </ul>
+                    <ul class="kid3">
+                        <li>儿童滑板车</li>
+                        <li>婴儿推车</li>
+                        <li>理发器</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="aside">生活 箱包
+                <div class="life">
+                    <ul class="life1">
+                        <li>小背包</li>
+                        <li>双肩包</li>
+                        <li>胸包</li>
+                        <li>旅行箱</li>
+                        <li>收纳袋</li>
+                        <li>运动鞋</li>
+                    </ul>
+                    <ul class="life2">
+                        <li>服饰</li>
+                        <li>眼镜</li>
+                        <li>床垫</li>
+                        <li>枕头</li>
+                        <li>螺丝刀</li>
+                        <li>水杯</li>
+                    </ul>
+                    <ul class="life3">
+                        <li>驱蚊器</li>
+                        <li>毛巾/浴巾</li>
+                        <li>笔</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="aside">智能 路由器
+                <div class="mao">
+                    <ul class="mao1">
+                        <li>MIJIA K歌麦克风</li>
+                        <li>打印机</li>
+                        <li>小米路由器</li>
+                        <li>Redmi路由器</li>
+                        <li>智能家庭</li>
+                        <li>对讲机</li>
+                    </ul>
+                    <ul class="mao2">
+                        <li>摄像机</li>
+                        <li>智能门锁</li>
+                        <li>门铃/猫眼</li>
+                        <li>小爱音箱</li>
+                        <li>家庭屏</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="aside">电源 配件
+                <div class="charge">
+                    <ul class="charge1">
+                        <li>插座插排</li>
+                        <li>移动电源</li>
+                        <li>数据线</li>
+                        <li>穿戴配件</li>
+                        <li>平板配件</li>
+                        <li>充电器</li>
+                    </ul>
+                    <ul class="charge2">
+                        <li>电池</li>
+                        <li>自拍杆</li>
+                        <li>手机壳</li>
+                        <li>手机贴膜</li>
+                        <li>无线充电器</li>
+                        <li>其他配件</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
