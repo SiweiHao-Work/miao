@@ -25,20 +25,11 @@
             border-bottom: 2px solid;
         }
 
-        section {
-            width: calc(100% - 600px);
-            height: 100vh;
-            float: left;
-            background-color: #fff8dc;
-            box-sizing: border-box;
-            border-bottom: 2px solid;
-        }
 
         header {
             padding-left: 2em;
             font-weight: bold;
             font-size: 20px;
-            white-space: nowrap;
             padding: 16px 0;
             margin-left: 40px;
             float: left;
@@ -73,27 +64,6 @@
             color: purple;
         }
 
-        div.h {
-            height: 60px;
-            border: 2px solid;
-        }
-
-        ol {
-            margin: 0;
-            padding-top: 2em;
-            padding-left: 50px;
-            padding-right: 50px;
-            overflow: auto;
-            height: calc(100vh - 98px);
-            border-left: 2px solid;
-            border-right: 2px solid;
-        }
-
-        p {
-            margin: 0;
-            margin-left: -40px;
-            padding-bottom: 1em;
-        }
 
         .right1 header {
             position: absolute;
@@ -106,7 +76,47 @@
         }
 
         .right1 {
-            border-right: 2px solid;
+            border-left: 2px solid;
+            box-sizing: border-box;
+            float: right;
+        }
+
+        .right2 {
+            float: right;
+        }
+
+        div {
+            overflow: hidden;
+        }
+
+        .h {
+            height: 70px;
+            border: 2px solid;
+            box-sizing: border-box;
+            font-size: 20px;
+            font-weight: bold;
+            padding-top: 14px;
+            padding-left: 1em;
+            background-color: #fff8dc;
+        }
+
+        .g {
+            height: calc(100vh - 70px);
+            box-sizing: border-box;
+            border: 2px solid;
+            border-top: none;
+            background-color: #fff8dc;
+        }
+
+        p {
+            margin-left: -2.5em;
+        }
+
+        ol {
+            padding-left: 3em;
+            padding-right: 3em;
+            overflow: auto;
+            height: calc(100vh - 90px);
         }
     </style>
 </head>
@@ -180,10 +190,14 @@
                 <li><a href="https://siweihao-work.github.io/miao/oald-layout-float.html">word60</a></li>
             </ul>
         </aside>
-        <section>
-            <div class="h">
-                <header>fantasy</header>
-            </div>
+        <aside class="right1">
+            <header>Vocabulary</header>
+        </aside>
+        <aside class="right2">
+            <header>History</header>
+        </aside>
+        <div class="h">fantasy</div>
+        <div class="g">
             <ol>
                 <p>Lorem,ipsurm.</p>
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam
@@ -193,7 +207,10 @@
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam
                     quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
                     Odio id
-                    error neque ullam?</li>
+                    error neque ullam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam
+                    voluptatibus
+                    aspernatur nam quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore
+                    doloribus eum? Odio id error neque ullam?</li>
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur nam
                     quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
                     Odio id
@@ -267,13 +284,7 @@
                     Odio id
                     error neque ullam?</li>
             </ol>
-        </section>
-        <aside class="right1">
-            <header>Vocabulary</header>
-        </aside>
-        <aside class="right2">
-            <header>History</header>
-        </aside>
+        </div>
     </div>
 </body>
 
