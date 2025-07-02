@@ -89,10 +89,16 @@
             height: 100vh;
         }
 
-        div.float {
-            width: 645px;
-            height: 240px;
+        section.floata {
+            width: 600px;
+            overflow: hidden;
             margin: auto;
+        }
+
+        div.float {
+            overflow: hidden;
+            width: 630px;
+            margin: -7.5px -15px;
             background-color: #fff;
         }
 
@@ -100,23 +106,12 @@
             width: 180px;
             height: 40px;
             border: 3px solid;
+            box-sizing: border-box;
+            float: left;
             margin: 7.5px 15px;
-            text-align: center;
             line-height: 34px;
+            text-align: center;
             background-color: pink;
-        }
-
-        div.float span:nth-child(3n - 2) {
-            float: left;
-            clear: both;
-        }
-
-        div.float span:nth-child(3n - 1) {
-            float: left;
-        }
-
-        div.float span:nth-child(3n) {
-            float: left;
         }
     </style>
 </head>
@@ -161,21 +156,22 @@
 
 
 
-
-    <div class="float">
-        <span>宽180高40(包含边框)</span>
-        <span>产品</span>
-        <span>产品</span>
-        <span>水平间隙30px</span>
-        <span>产品</span>
-        <span>产品</span>
-        <span>垂直间隙15px</span>
-        <span>产品</span>
-        <span>产品</span>
-        <span>边框宽度3px</span>
-        <span>产品</span>
-        <span>产品</span>
-    </div>
+    <section class="floata">
+        <div class="float">
+            <span>宽180高40(包含边框)</span>
+            <span>产品</span>
+            <span>产品</span>
+            <span>水平间隙30px</span>
+            <span>产品</span>
+            <span>产品</span>
+            <span>垂直间隙15px</span>
+            <span>产品</span>
+            <span>产品</span>
+            <span>边框宽度3px</span>
+            <span>产品</span>
+            <span>产品</span>
+        </div>
+    </section>
 </body>
 
 </html>
