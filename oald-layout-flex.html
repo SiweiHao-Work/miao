@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100vh;
+            min-width: 800px;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        aside {
+            width: 200px;
+            height: 100vh;
+            border-bottom: 2px solid;
+            box-sizing: border-box;
+            background-color: pink;
+        }
+
+        div.h {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            width: 120px;
+            margin-left: 70px;
+        }
+
+        aside.right2>div.h {
+            width: 75px;
+            margin-left: 110px;
+        }
+
+
+        input[type="text"] {
+            background-color: #fff;
+            height: 20px;
+            width: 130px;
+            margin-left: 2px;
+        }
+
+        button {
+            width: 30px;
+            height: 20px;
+            margin-left: -4px;
+        }
+
+        .header {
+            overflow: auto;
+        }
+
+
+        main {
+            display: flex;
+        }
+
+        ul {
+            height: calc(100vh - 115px);
+            overflow: auto;
+            list-style-type: none
+        }
+
+        a[href="https://siweihao-work.github.io/miao/oald-layout-flex.html"] {
+            text-decoration: none;
+            color: purple;
+        }
+
+        section {
+            display: flex;
+            width: calc(100% - 600px);
+            flex-wrap: wrap;
+            border: 2px solid;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        section div.header {
+            height: 70px;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 1em;
+        }
+
+        ol {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 50px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            overflow: auto;
+            height: calc(100vh - 96px);
+            border-top: 2px solid;
+        }
+
+        p {
+            padding-top: 10px;
+            margin-left: -40px;
+        }
+
+        .right1 {
+            border-right: 2px solid;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <aside class="left">
+            <div class="h">OALD Se7en</div>
+            <input type="text">
+            <button></button>
+            <ul>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word1</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word2</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word3</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word4</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word5</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word6</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word7</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word8</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word9</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word10</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word11</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word12</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word13</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word14</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word15</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word16</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word17</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word18</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word19</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word20</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word21</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word22</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word23</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word24</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word25</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word26</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word27</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word28</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word29</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word30</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word31</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word32</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word33</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word34</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word35</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word36</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word37</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word38</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word39</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word40</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word41</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word42</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word43</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word44</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word45</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word46</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word47</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word48</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word49</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word50</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word51</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word52</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word53</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word54</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word55</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word56</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word57</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word58</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word59</a></li>
+                <li><a href="https://siweihao-work.github.io/miao/oald-layout-flex.html">word60</a></li>
+            </ul>
+        </aside>
+        <section>
+            <div class="header">fantasy</div>
+            <div class="content">
+                <ol>
+                    <p>Lorem,ipsurm.</p>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?1</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?2</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?3</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?4</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?5</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?6</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?7</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?8</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?9</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?10</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?11</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?12</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?13</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?14</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?15</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?16</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?17</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?18</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?19</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam voluptatibus aspernatur
+                        nam
+                        quidem inventore, incidunt temporibus odit voluptate suscipit nisi dolores labore doloribus eum?
+                        Odio id error neque ullam?20</li>
+                </ol>
+            </div>
+        </section>
+        <main>
+            <aside class="right1">
+                <div class="h">Vocabulary</div>
+            </aside>
+            <aside class="right2">
+                <div class="h">History</div>
+            </aside>
+        </main>
+    </div>
+</body>
+
+</html>
