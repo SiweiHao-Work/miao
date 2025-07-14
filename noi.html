@@ -1,0 +1,184 @@
+<script type="javascript" id="ch103/01">
+    var a = + prompt('input a number : ')
+    var b = + prompt('input a number : ')
+    var c = a + b
+
+    console.log(c)
+</script>
+
+<script type="javascript" id="ch103/02">
+    var a = + prompt('input a number : ')
+    var b = + prompt('input a number : ')
+    var c = + prompt('input a number : ')
+    a = Math.min(Math.max(a , -10000),10000)
+    b = Math.min(Math.max(b , -10000),10000)
+    c = Math.min(Math.max(c , -10000),10000)
+    var d = (a + b) * c
+
+    console.log(d)
+</script>
+
+<script type="javascript" id="ch103/03">
+    var a = + prompt('input a number : ')
+    var b = + prompt('input a number : ')
+    var c = + prompt('input a number : ')
+    a = Math.min(Math.max(a , -10000),10000)
+    b = Math.min(Math.max(b , -10000),10000)
+    c = Math.min(Math.max(c , -10000),10000)
+    var d = Math.floor((a + b) / c)
+
+    console.log(d)
+</script>
+
+<script type="javascript" id="ch103/04">
+    var a = + prompt('input a number : ')
+    var b = + prompt('input a number : ')
+    var c = Math.floor(a / b)
+    var d = a % b
+
+    console.log(c, d)
+
+</script>
+
+<script type="javascript" id="ch103/05">
+    var a = + prompt('input a number : ')
+    var b = + prompt('input a number : ')
+    var c = a / b
+
+    console.log(c.toFixed(9))
+</script>
+
+<script type="javascript" id="ch103/06">
+    var a = + prompt('input a number : ')
+    var b = + prompt('input a number : ')
+    var c = (b / a) * 100
+
+    console.log(c.toFixed(3) + "%")
+</script>
+
+<script type="javascript" id="ch103/07">
+    var x = + prompt('input a number : ')
+    var a = + prompt('input a number : ')
+    var b = + prompt('input a number : ')
+    var c = + prompt('input a number : ')
+    var d = + prompt('input a number : ')
+    var f = a * (x ** 3) + b * (x ** 2) + c * x + d
+
+    console.log(f.toFixed(7))
+</script>
+
+<script type="javascript" id="ch103/08">
+    var F = + prompt('input a number : ')
+    var C = 5 * (F - 32) / 9
+
+    console.log(C.toFixed(5))
+</script>
+
+<script type="javascript" id="ch103/09">
+    var r = + prompt('input a number : ')
+    var d = 2 * r
+    var c = 2 * Math.PI * r
+    var s = Math.PI * (r ** 2)
+
+    console.log(d.toFixed(4), c.toFixed(4), s.toFixed(4))
+</script>
+
+<script type="javascript" id="ch103/10">
+    var r1 = + prompt('input a number : ')
+    var r2 = + prompt('input a number : ')
+    var R = 1 / (1 / r1 + 1 / r2)
+
+    console.log(R.toFixed(2))
+</script>
+
+<script type="javascript" id="ch103/11">
+    var a = + prompt('input a number : ')
+    var b = + prompt('input a number : ')
+    var k = Math.floor(a / b)
+    var r = a - k * b
+
+    console.log(r.toFixed(4))
+</script>
+
+<script type="javascript" id="ch103/12">
+    var r = + prompt('r : ')
+    var V = 4 / 3 * 3.14 * (r ** 3)
+
+    console.log(V.toFixed(2))
+</script>
+
+<script type="javascript" id="ch103/13">
+    var n = + prompt('n : ')
+    var N = (n - n % 100) / 100 + (n % 10) * 100 + (n % 100 - n % 10)
+
+    console.log(N)
+</script>
+
+<script type="javascript" id="ch103/14">
+    var h = + prompt('input a number : ')
+    var r = + prompt('input a number : ')
+    var T = Math.ceil(20000 / (3.14159 * r * r * h))
+
+    console.log(T)
+</script>
+
+<script type="javascript" id="ch103/15">
+    var n = + prompt('input a number : ')
+    var x = + prompt('input a number : ')
+    var y = + prompt('input a number : ')
+    var tol = Math.floor(n - (y / x))
+
+    console.log(tol)
+</script>
+
+<script type="javascript" id="ch103/16">
+    var Xa = + prompt('input a number : ')
+    var Ya = + prompt('input a number : ')
+    var Xb = + prompt('input a number : ')
+    var Yb = + prompt('input a number : ')
+    var deltaX = (Xb - Xa) ** 2
+    var deltaY = (Yb - Ya) ** 2
+    var length = (deltaX + deltaY) ** 0.5
+
+    console.log(length.toFixed(3))
+</script>
+
+<script type="javascript" id="ch103/17">
+    var x1 = + prompt('input a number : ')
+    var y1 = + prompt('input a number : ')
+    var x2 = + prompt('input a number : ')
+    var y2 = + prompt('input a number : ')
+    var x3 = + prompt('input a number : ')
+    var y3 = + prompt('input a number : ')
+    var S = 0.5 * (x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2))
+
+    console.log(S.toFixed(2))
+</script>
+
+<script type="javascript" id="ch103/18">
+    var a1 = + prompt('input a number : ')
+    var a2 = + prompt('input a number : ')
+    var n = + prompt('input a number : ')
+    var d = a2 - a1
+    var R = a1 + (n - 1) * d
+
+    console.log(R)
+</script>
+
+<script type="javascript" id="ch103/19">
+    var A = + prompt('input a number : ')
+    var B = + prompt('input a number : ')
+    A = Math.max(A, 1)
+    B = Math.min(B, 50000)
+    var C = A * B
+
+    console.log(C)
+</script>
+
+<script type="javascript" id="ch103/20">
+    var n = + prompt('input a number : ')
+    n = Math.min(Math.max(n, 0), 31)
+    var val = 2 ** n
+
+    console.log(val)
+</script>
