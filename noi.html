@@ -19,19 +19,19 @@
     var a = + prompt('input a number : ')
     var b = + prompt('input a number : ')
     var c = + prompt('input a number : ')
-    var d = Math.floor((a + b) / c)
+    var d = a + b
+    var val = (d - d % c) / c
 
-    console.log(d)
+    console.log(val)
 </script>
 
 <script type="javascript" id="ch103/04">
     var a = + prompt('input a number : ')
     var b = + prompt('input a number : ')
-    var c = Math.floor(a / b)
+    var c = (a - a % b) / b
     var d = a % b
 
     console.log(c, d)
-
 </script>
 
 <script type="javascript" id="ch103/05">
@@ -88,8 +88,7 @@
 <script type="javascript" id="ch103/11">
     var a = + prompt('input a number : ')
     var b = + prompt('input a number : ')
-    var k = Math.floor(a / b)
-    var r = a - k * b
+    var r = a % b
 
     console.log(r.toFixed(4))
 </script>
@@ -101,11 +100,13 @@
     console.log(V.toFixed(2))
 </script>
 
-<script type="javascript" id="ch103/13">
+<script id="ch103/13">
     var n = + prompt('n : ')
-    var N = (n - n % 100) / 100 + (n % 10) * 100 + (n % 100 - n % 10)
-
-    console.log(N)
+    var a1 = n % 10
+    var a2 = (n % 100 - a1) / 10
+    var a3 = (n - n % 100) / 100
+    var r = '' + a1 + a2 + a3
+    console.log(r)
 </script>
 
 <script type="javascript" id="ch103/14">
