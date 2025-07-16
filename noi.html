@@ -191,11 +191,13 @@
     var n = + prompt('n : ')
     if (n > 0) {
         var val = Math.abs(n)
+
         console.log(val)
     } else if (n == 0) {
         console.log(0)
     } else {
         var val = Math.abs(n)
+
         console.log(val)
     }
 </script>
@@ -268,34 +270,37 @@
 <script type="javascript" id="ch104/09">
     var val = + prompt('val : ')
 
-    if (val % 3 == 0 && val % 5 == 0 && val % 7 == 0) {
-        console.log(3, 5, 7)
-    } else if (val % 3 == 0 && val % 5 == 0) {
-        console.log(3, 5)
-    } else if (val % 3 == 0 && val % 7 == 0) {
-        console.log(3, 7)
-    } else if (val % 5 == 0 && val % 7 == 0) {
-        console.log(5, 7)
-    } else if (val % 3 == 0) {
-        console.log(3)
-    } else if (val % 5 == 0) {
-        console.log(5)
-    } else if (val % 7 == 0) {
-        console.log(7)
-    } else {
+    if (val % 3 != 0 && val % 5 != 0 && val % 7 != 0) {
         console.log('n')
     }
+
+    if (val % 3 == 0) {
+        console.log(3)
+    }
+
+    if (val % 5 == 0) {
+        console.log(5)
+    }
+
+    if (val % 7 == 0) {
+        console.log(7)
+    } 
 </script>
 
-<script type="javascript" id="ch104/10">
+<script id="ch104/10">
     var 语文 = + prompt('语文 : ')
     var 数学 = + prompt('数学 : ')
+    var count = 0
 
-    if (语文 >= 60 && 数学 >= 60) {
-        console.log(0)
-    } else {
-        console.log(1)
+    if (语文 < 60) {
+        count = count + 1
     }
+
+    if (数学 < 60) {
+        count = count + 1
+    }
+
+    console.log(count)
 </script>
 
 <script type="javascript" id="ch104/11">
@@ -348,39 +353,18 @@
     var w = + prompt('weigh : ')
     var rush = prompt('y / n : ')
 
-    if (w <= 1000 && rush == 'n') {
-        var val = 8
-
-        console.log(val)
-    } else if (w > 1000 && w - 1000 <= 500) {
-        if (rush == 'y') {
-            var val = 8 + 4 + 5
-
-            console.log(val)
-        } else {
-            var val = 8 + 4
-
-            console.log(val)
-        }
-
-    } else if (w > 1000 && w - 1000 > 500) {
-        if (rush == 'y') {
-            var exp = Math.ceil((w - 1000) / 500)
-            var val = 8 + exp * 4 + 5
-
-            console.log(val)
-        } else {
-            var exp = Math.ceil((w - 1000) / 500)
-            var val = 8 + exp * 4
-
-            console.log(val)
-        }
+    if (w > 1000) {
+        var cost = 8 + (Math.ceil((w - 1000) / 500)) * 4
 
     } else {
-        var val = 8 + 5
-
-        console.log(val)
+        var cost = 8
     }
+
+    if (rush == 'y') {
+        var cost = cost + 5
+    }
+
+    console.log(cost)
 </script>
 
 <script type="javascript" id="ch104/15">
