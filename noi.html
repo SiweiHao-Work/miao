@@ -100,7 +100,7 @@
     console.log(V.toFixed(2))
 </script>
 
-<script id="ch103/13">
+<script type="javascript" id="ch103/13">
     var n = + prompt('n : ')
     var a1 = n % 10
     var a2 = (n % 100 - a1) / 10
@@ -173,4 +173,320 @@
     var val = 2 ** n
 
     console.log(val)
+</script>
+
+<script type="javascript" id="ch104/01">
+    var N = + prompt('N : ')
+
+    if (N > 0) {
+        console.log('positive')
+    } else if (N == 0) {
+        console.log('zero')
+    } else {
+        console.log('negative')
+    }
+</script>
+
+<script type="javascript" id="ch104/02">
+    var n = + prompt('n : ')
+    if (n > 0) {
+        var val = Math.abs(n)
+        console.log(val)
+    } else if (n == 0) {
+        console.log(0)
+    } else {
+        var val = Math.abs(n)
+        console.log(val)
+    }
+</script>
+
+<script type="javascript" id="ch104/03">
+    var n = + prompt('n : ')
+    if (n % 2 != 0) {
+        console.log('odd')
+    } else {
+        console.log('even')
+    }
+</script>
+
+<script type="javascript" id="ch104/04">
+    var s = prompt('s : ')
+    var ASCII = s.charCodeAt(0)
+
+    if (ASCII % 2 != 0) {
+        console.log('YES')
+    } else {
+        console.log('NO')
+    }
+</script>
+
+<script type="javascript" id="ch104/05">
+    var x = + prompt('x : ')
+    var y = + prompt('y : ')
+
+    if (x > y) {
+        console.log(' > ')
+    } else if (x == y) {
+        console.log(' = ')
+    } else {
+        console.log(' < ')
+    }
+</script>
+
+<script type="javascript" id="ch104/06">
+    var n = + prompt('n : ')
+
+    if (n >= 10 && n <= 99) {
+        console.log(1)
+    } else {
+        console.log(0)
+    }
+</script>
+
+<script type="javascript" id="ch104/07">
+    var l = + prompt('l : ')
+    var e = + prompt('e : ')
+
+    if (l >= 10 || e >= 20) {
+        console.log(1)
+    } else {
+        console.log(0)
+    }
+
+</script>
+
+<script type="javascript" id="ch104/08">
+    var n = + prompt('n : ')
+
+    if (n % 3 == 0 && n % 5 == 0) {
+        console.log('YES')
+    } else {
+        console.log('NO')
+    }
+</script>
+
+<script type="javascript" id="ch104/09">
+    var val = + prompt('val : ')
+
+    if (val % 3 == 0 && val % 5 == 0 && val % 7 == 0) {
+        console.log(3, 5, 7)
+    } else if (val % 3 == 0 && val % 5 == 0) {
+        console.log(3, 5)
+    } else if (val % 3 == 0 && val % 7 == 0) {
+        console.log(3, 7)
+    } else if (val % 5 == 0 && val % 7 == 0) {
+        console.log(5, 7)
+    } else if (val % 3 == 0) {
+        console.log(3)
+    } else if (val % 5 == 0) {
+        console.log(5)
+    } else if (val % 7 == 0) {
+        console.log(7)
+    } else {
+        console.log('n')
+    }
+</script>
+
+<script type="javascript" id="ch104/10">
+    var 语文 = + prompt('语文 : ')
+    var 数学 = + prompt('数学 : ')
+
+    if (语文 >= 60 && 数学 >= 60) {
+        console.log(0)
+    } else {
+        console.log(1)
+    }
+</script>
+
+<script type="javascript" id="ch104/11">
+    var 星期 = + prompt('星期 : ')
+
+    if (星期 == 1 || 星期 == 3 || 星期 == 5) {
+        console.log('NO')
+    } else if (星期 >= 8 || 星期 <= 0) {
+        console.log('请输入有效数字')
+    } else {
+        console.log('YES')
+    }
+</script>
+
+<script type="javascript" id="ch104/12">
+    var d = +prompt('distance : ')
+    var Bike = (d / 3) + 50
+    var Walk = d / 1.2
+
+    if (Bike < Walk) {
+        console.log('Bike')
+    } else if (Bike > Walk) {
+        console.log('Walk')
+    } else {
+        console.log('All')
+    }
+</script>
+
+<script type="javascript" id="ch104/13">
+    var N = + prompt('N : ')
+
+    if (0 <= N && N < 5) {
+        Y = (-N + 2.5).toFixed(3)
+        
+        console.log(Y)
+    } else if (5 <= N && N < 10) {
+        Y = (2 - 1.5 * (N - 3) * (N - 3)).toFixed(3)
+
+        console.log(Y)
+    } else if (10 <= N && N < 20) {
+        Y = (N / 2 - 1.5).toFixed(3)
+
+        console.log(Y)
+    } else {
+        console.log('invalid inputs')
+    }
+</script>
+
+<script type="javascript" id="ch104/14">
+    var w = + prompt('weigh : ')
+    var rush = prompt('y / n : ')
+
+    if (w <= 1000 && rush == 'n') {
+        var val = 8
+
+        console.log(val)
+    } else if (w > 1000 && w - 1000 <= 500) {
+        if (rush == 'y') {
+            var val = 8 + 4 + 5
+
+            console.log(val)
+        } else {
+            var val = 8 + 4
+
+            console.log(val)
+        }
+
+    } else if (w > 1000 && w - 1000 > 500) {
+        if (rush == 'y') {
+            var exp = Math.ceil((w - 1000) / 500)
+            var val = 8 + exp * 4 + 5
+
+            console.log(val)
+        } else {
+            var exp = Math.ceil((w - 1000) / 500)
+            var val = 8 + exp * 4
+
+            console.log(val)
+        }
+
+    } else {
+        var val = 8 + 5
+
+        console.log(val)
+    }
+</script>
+
+<script type="javascript" id="ch104/15">
+    var a = + prompt('a : ')
+    var b = + prompt('b : ')
+    var c = + prompt('c : ')
+
+    if (a - b > 0 && a - c > 0) {
+        console.log(a)
+    } else if (b - a > 0 && b - c > 0) {
+        console.log(b)
+    } else {
+        console.log(c)
+    }
+</script>
+
+<script type="javascript" id="ch104/16">
+    var a = + prompt('a : ')
+    var b = + prompt('b : ')
+    var c = + prompt('c : ')
+
+    if (a + b > c && a + c > b && b + c > a) {
+        console.log('yes')
+    } else {
+        console.log('no')
+    }
+</script>
+
+<script type="javascript" id="ch104/17">
+    var year = + prompt('year : ')
+
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        console.log('Y')
+    } else {
+        console.log('N')
+    } 
+</script>
+
+<script type="javascript" id="ch104/18">
+    var x = + prompt('x : ')
+    var y = + prompt('y : ')
+    var S = 1
+
+    if (x * y <= 1) {
+        console.log('yes')
+    } else {
+        console.log('no')
+    }
+</script>
+
+<script type="javascript" id="ch104/19">
+    var x = + prompt('x : ')
+    var y = + prompt('y : ')
+    var z = prompt('运算符 : ')
+
+    if (z == '+') {
+        console.log(x + y)
+    } else if (z == '-') {
+        console.log(x - y)
+    } else if (z == '*') {
+        console.log(x * y)
+    } else if (z == '/') {
+        if (y != 0) {
+            console.log(x / y)
+        } else {
+            console.log('Divided by zero!')
+        }
+    } else {
+        console.log('Invalid operator!')
+    }
+</script>
+
+<script type="javascript" id="ch104/20">
+    var a = + prompt('a : ')
+    var b = + prompt('b : ')
+    var c = + prompt('c : ')
+
+    if (b * b == 4 * a * c) {
+        var x1 = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a)
+        var x2 = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a)
+
+        console.log('x1 = x2 =', + x1)
+    } else if (b * b > 4 * a * c) {
+        var x1 = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a)
+        var x2 = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a)
+
+        console.log('x1 =', + x1, 'x2 =', + x2)
+    } else {
+        var r1 = (-b / (2 * a))
+        var r2 = (-b / (2 * a))
+        var v1 = ((Math.sqrt(4 * a * c - b * b) / (2 * a)).toFixed(5))
+        var v2 = ((Math.sqrt(4 * a * c - b * b) / (2 * a)).toFixed(5))
+        
+        console.log('x1 = ', r1.toFixed(5) + '+' + v1 + 'i', 'x2 = ', r2.toFixed(5) + '-' + v2 + 'i')
+    }
+</script>
+
+<script type="javascript" id="ch104/21">
+    var n = + prompt('n : ')
+    var x = + prompt('x : ')
+    var y = + prompt('y : ')
+    var val = n - y / x
+
+    if (val > 0) {
+        console.log(Math.floor(val))
+    } else {
+        console.log('没有好的')
+    }
 </script>
