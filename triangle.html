@@ -1,0 +1,122 @@
+<script type="javascript">
+  var n = ''
+
+  for (var i = 1; i <= 7; i++) {
+    n += '#'
+    console.log(n)
+  }
+  console.log(n.length)
+
+</script>
+
+<script type="javascript">
+
+  for (var i = 1; i <= 100; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      console.log('FizzBuzz')
+    } else if (i % 3 == 0) {
+      console.log('Fizz')
+    } else if (i % 5 == 0) {
+      console.log('Buzz')
+    } else { console.log(i) }
+  } 
+
+</script>
+
+<script type="棋盘version.1">
+  var a = ' # # # #'
+  var b = '# # # # '
+  var s = ''
+
+  for (var i = 1; i < 5; i++) {
+    s += a + '\n' + b + '\n'
+  }
+
+  console.log(s)
+
+</script>
+
+<script type="棋盘version.1">
+  var s = ''
+
+  for (var i = 1; i <= 8; i++) {
+    var a = ' # # # #'
+    var b = '# # # # '
+
+    if (i % 2 == 0) {
+      s += b + '\n'
+    } else {
+      s += a + '\n'
+    }
+  }
+
+  console.log(s)
+
+</script>
+
+<script type="棋盘version.2">
+  var size = 8
+
+  for (var i = 1; i <= size; i++) {
+    var a, b;
+
+    if (i % 2 == 0) {
+      a += '#'
+      b += ' '
+    } else {
+      a += ' '
+      b += '#'
+    }
+  }
+
+  var s = ''
+
+  for (var i = 1; i <= size; i++) {
+    if (i % 2 == 0) {
+      s += b + '\n'
+    } else {
+      s += a + '\n'
+    }
+  }
+  console.log(s)
+
+</script>
+
+<script type="棋盘version.3">
+  var size = 8
+
+  var s = ''
+
+  for (var r = 1; r <= size; r++) {
+    for (var c = 1; c <= size; c++) {
+      if ((r + c) % 2 == 0) {
+        s += ' '
+      } else {
+        s += '#'
+      }
+    }
+    s += '\n'
+  }
+
+  console.log(s)
+
+</script>
+
+<script type="call stack">//调用栈，先进后出；后进先出
+  function foo() {
+    console.log(1)
+    baz()
+    console.log(2)
+  }
+
+  function baz() {
+    console.log(3)
+    bar()
+    console.log(4)
+  }
+
+  function bar() {
+    console.log(5)
+    console.log(6)
+  }
+</script>
