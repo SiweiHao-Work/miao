@@ -34,7 +34,7 @@
   * 画一条水平实线，粗细为一个像素
   * 画一条垂直实线，粗细为一个像素
   * 画一条一个实点一个空点的虚线
-  * 画一条两个实点两个空点的虚线
+  * 画一条两个实点两个空点的虚线*
   * 画一条三个实点两个空点的虚线
   * 画一条45度的斜线
   * 画一条30度的斜线（与x轴的夹角呈30度）
@@ -60,7 +60,7 @@
   ------
   0.5 0.87
   -0.87 0.5
-  
+
   */
 </script>
 <script>
@@ -74,22 +74,59 @@
     dot(100, y, 'red')
   }
 
-  for (var x = 1; x <= 100; x++) {
-    if (x % 2 != 0) {
-      dot(x, 200, 'orange')
-    } else {
-      dot(x, 200, 'white')
+  for (var x = 1; x <= 100; x += 2) {
+    dot(x, 120, 'orange')
+  }
+
+  for (var x = 0; x <= 100; x++) {
+    if (x % 4 < 2) {
+      dot(x, 140, 'aqua')
     }
   }
 
-  for (var x = 1; x <= 100; x++) {
-    var count = 0
-    count++
-    dot(x, 300, 'aqua')
+  for (var x = 0; x <= 100; x++) {
+    if (x % 5 < 3) {
+      dot(x, 160, 'pink')
+    }
+  }
 
-    if (count == 2) {
-      dot(x, 300, 'white')
-      count = 0
+  for (var x = 200; x <= 300; x++) {
+    var y = (1 / 3) * x
+    dot(x, y, 'green')
+  }
+
+  for (var x = 300; x <= 400; x++) {
+    var y = 0 + Math.cos(Math.PI / 3) * (x - 300)
+    dot(x, y, 'blue')
+  }
+
+  for (var x = 400; x <= 500; x++) {
+    var y = 0 + Math.sin(Math.PI / 3) * (x - 400)
+    dot(x, y, 'brown')
+  }
+
+  for (var x = 0; x <= 1000; x++) {
+    var y = x
+    dot(x, y, 'gold')
+  }
+
+  for (var x = 900; x <= 1000; x++) { //实心矩形
+    for (var y = 0; y <= 150; y++) {
+      dot(x, y, 'grey')
+    }
+  }
+
+  for (var x = 1; x <= 151; x++) { //空心矩形
+    for (var y = 200; y <= 300; y++) {
+      if (x == 1 || x == 151 || y == 200 || y == 300) {
+        dot(x, y, 'grey')
+      }
+    }
+  }
+
+  for (var x = 300; x <= 350; x++) {
+    for (var y = 300; y <= 350; y++) {
+
     }
   }
 </script>
