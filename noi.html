@@ -1441,9 +1441,58 @@
 </script>
 
 <script type="javascript" id="4"> //weekday: 输入年份与月份，输出这个月的第一天是周几（视具体设定，周一可以用1或0表示）
-    var year = +prompt('year : ')
-    var month = +prompt('month : ')
+    // 判断这一年是否是闰年
+    function isLeapYear(year) {
+        if (year % 400 == 0) {
+            return true
+        }
+        if (year % 100 == 0) {
+            return false
+        }
+        if (year % 4 == 0) {
+            return true
+        }
+        return false
+    }
 
+    // 获取某年某月的天数
+    function getMonthDay(year, month) {
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                return 31
+            case 2:
+                if (isLeapYear(year)) {
+                    return 29
+                } else {
+                    return 28
+                }
+            default:
+                return 30
+        }
+    }
+    function weekday(year, month) {
+        var totalDays = 0 // 计算公元第一天到这一个月的第一天的总天数
+
+        // for (var y = 1; y < year; y++) {
+        //     if (isLeapYear(y)) {
+        //         totalDays += 366
+        //     } else {
+        //         totalDays += 365
+        //     }
+        // }
+        totalDays += (year - 1) * 365 + Math.floor((year - 1) / 4) - Math.floor((year - 1) / 100) + Math.floor((year - 1) / 400)
+
+        for (var m = 1; m < month; m++) {
+            totalDays += getMonthDay(year, m)
+        }
+        return (totalDays + 1) % 7
+    }
 
 </script>
 

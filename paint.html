@@ -204,15 +204,180 @@
   }
 
   // * 画两个空心的圆，圆心在画布中心：
-  for (var x = 300; x <= 350; x++) {
-    for (var y = 300; y <= 350; y++) {
+
+  function circle(cx, cy, r) { // 八对称性
+    for (var x = 0; x <= r / Math.sqrt(2); x++) {
+      var y = Math.sqrt(r * r - x * x)
+
+      dot(x + cx, y + cy)
+      dot(x + cx, -y + cy)
+      dot(-x + cx, y + cy)
+      dot(-x + cx, -y + cy)
+      dot(y + cx, x + cy)
+      dot(y + cx, -x + cy)
+      dot(-y + cx, x + cy)
+      dot(-y + cx, -x + cy)
+    }
+  }
+  circle(500, 500, 50) // * 一个半径为50像素
+  circle(500, 500, 200) // * 一个半径为200像素
+
+  function circle2(cx, cy, r) { //简化
+    var x = 0
+    var y = r
+
+    while (x <= y) {
+      dot(x + cx, y + cy)
+      dot(x + cx, -y + cy)
+      dot(-x + cx, y + cy)
+      dot(-x + cx, -y + cy)
+      dot(y + cx, x + cy)
+      dot(y + cx, -x + cy)
+      dot(-y + cx, x + cy)
+      dot(-y + cx, -x + cy)
+
+      x++
+      y1 = y
+      y2 = y - 1
+      var r1 = (x * x + y1 * y1)
+      var r2 = (x * x + y2 * y2)
+      var rr = (r * r)
+
+      var d1 = Math.abs(r1 - rr)
+      var d2 = Math.abs(r2 - rr)
+      if (d1 < d2) {
+        y = y1
+      } else {
+        y = y2
+      }
+    }
+  }
+
+  for (var x = -50; x <= 50; x++) { // 有瑕疵
+    var y = Math.sqrt(50 * 50 - x * x)
+
+    dot(x + 500, y + 500)
+    dot(x + 500, -y + 500)
+  }
+
+  // * 画一个实心的圆，半径至少为100像素 
+  function circlefull(cx, cy, r) {
+    for (var y = -r; y <= r; y++) {
+      var xMax = Math.sqrt(r * r - y * y)
+      for (var x = -xMax; x <= xMax; x++) {
+        dot(x + cx, y + cy)
+      }
+    }
+  }
+
+  // * 画一个【大小位置都合适】的sin(x)的图像 *
+  for (var x = 0; x <= 1000; x++) {
+    var y = 50 * Math.sin(x / 50)
+    dot(x, y + 500)
+  }
+
+  // * 画出rgb色彩空间的某一面（尺寸要大于100x100）*
+  // 根据坐标来生成颜色
+  for (var r = 0; r < 256; r++) {
+    for (var g = 0; g < 256; g++) {
+      dot(r + 100, g + 100, 'rgb(' + r + ',' + g + ',0)')
+    }
+  }
+
+  // * 如果做出上一题后，尝试将其每个点的坐标乘以一个矩阵（如(2, 0, 0, 2)或(1, 0.27得到新的位置，即绘制出被线性变换后的色彩空间某一面
+  // 可以考虑如下几种矩阵：
+  //   2 0
+  //   0 2
+  //   ------
+  for (var r = 0; r < 256; r++) {
+    for (var g = 0; g < 256; g++) {
+      var x = 2 * r
+      var y = 2 * g
+      dot(x + 300, y + 300, 'rgb(' + r + ',' + g + ',0)')
+      dot(x + 1 + 300, y + 300, 'rgb(' + r + ',' + g + ',0)')
+      dot(x + 300, y + 1 + 300, 'rgb(' + r + ',' + g + ',0)')
+      dot(x + 1 + 300, y + 1 + 300, 'rgb(' + r + ',' + g + ',0)')
+    }
+  }
+
+  //   1 0.27
+  //   0 1
+  //   ------
+  for (var r = 0; r < 256; r++) {
+    for (var g = 0; g < 256; g++) {
+      var x = r
+      var y = 0.27 * r + g
+      dot(x + 30, y + 500, 'rgb(' + r + ',' + g + ',0)')
+      dot(x + 1 + 30, y + 500, 'rgb(' + r + ',' + g + ',0)')
+      dot(x + 30, y + 1 + 500, 'rgb(' + r + ',' + g + ',0)')
+      dot(x + 1 + 30, y + 1 + 500, 'rgb(' + r + ',' + g + ',0)')
+    }
+  }
+  //   0.5    0.87
+  //   - 0.87 0.5
+  //   ------
+  for (var r = 0; r < 256; r++) {
+    for (var g = 0; g < 256; g++) {
+      var x = 0.5 * r - 0.87 * g
+      var y = 0.87 * r + 0.5 * g
+      dot(x + 700, y + 50, 'rgb(' + r + ',' + g + ',255)')
 
     }
   }
-  // * 一个半径为50像素
-  //     * 一个半径为200像素
-  //     * 画一个实心的圆，半径至少为100像素
+  // https://gautamnagrawal.medium.com/rotating-image-by-any-angle-shear-transformation-using-only-numpy-d28d16eb5076
+  var theta = 0.3 //弧度
+  for (var r = 0; r < 256; r++) {
+    for (var g = 0; g < 256; g++) {
+      var color = 'rgb(' + r + ',' + g + ',255)'
+      var x = r
+      var y = g
+      // 计算精度高，算出来的值是浮点数，计算出的结果需要四舍五入取整。但结果出来的边会毛糙
+      // 上取整round，下取整都可以floor
+      // 第一次倾斜变换
+      x = Math.floor(x)
+      y = Math.floor(y - x * Math.tan(theta / 2))
 
+      // 第二次倾斜变换
+      x = Math.floor(x + y * Math.sin(theta))
+      y = Math.floor(y)
+
+      // 第三次倾斜变换
+      x = Math.floor(x)
+      y = Math.floor(y - x * Math.tan(theta / 2))
+
+      dot(x + 500, y + 700, color)
+    }
+  }
+
+  // * 画一个贝塞尔曲线（二阶或三阶均可，二阶由三个点确定，三阶由四个点确定）
+  function bezierCurve(x1, y1, x2, y2, x3, y3) {
+    for (var p = 0; p <= 1; p += 0.001) {
+      var ax = x1 * (1 - p) + x2 * p
+      var ay = y1 * (1 - p) + y2 * p
+      var bx = x2 * (1 - p) + x3 * p
+      var by = y2 * (1 - p) + y3 * p
+
+      var cx = ax * (1 - p) + bx * p
+      var cy = bx * (1 - p) + by * p
+      dot(cx, cy)
+    }
+  }
+
+  // 
+  var ax = 500
+  var ay = 100
+  var bx = 630
+  var by = 350
+  var cx = 950
+  var cy = 50
+
+  for (var t = 0; t <= 1; t += 0.002) {
+    var x = ax * (1 - t) * (1 - t) + 2 * bx * t * (1 - t) + cx * t * t
+    var y = ay * (1 - t) * (1 - t) + 2 * by * t * (1 - t) + cy * t * t
+    dot(x, y)
+  }
+
+  dot(bx, by)
 </script>
 
 </html>
