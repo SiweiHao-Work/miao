@@ -16,16 +16,20 @@ class Complex {
 
 class Vector {
   constructor(x, y) {
-    this._x = x
-    this._y = y
+    this.x = x
+    this.y = y
   }
 
   plus(c) {
-    return new Vector((this._x + c.x), (this._y + c.y))
+    var x = this.x + c.x
+    var y = this.y + c.y
+    return new Vector(x, y)
   }
 
   minus(d) {
-    return new Vector((this._x - d.x), (this._y - d.y))
+    var x = this.x - d.x
+    var y = this.y - d.y
+    return new Vector(x, y)
   }
 }
 
