@@ -15,17 +15,17 @@ class Complex {
 }
 
 class Vector {
-  constructor(a, b) {
-    this.a = a
-    this.b = b
+  constructor(x, y) {
+    this._x = x
+    this._y = y
   }
 
   plus(c) {
-    return new Vector((this.a + c.a), (this.b + c.b))
+    return new Vector((this._x + c.x), (this._y + c.y))
   }
 
   minus(d) {
-    return new Vector((this.a - d.a), (this.b - d.b))
+    return new Vector((this._x - d.x), (this._y - d.y))
   }
 }
 
