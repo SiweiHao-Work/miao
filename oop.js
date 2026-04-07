@@ -126,25 +126,29 @@ class LinkedList {
 
 class MyMap {
   constructor() {
-    this._res = []
+    this._keys = []
+    this._vals = []
     this._size = 0
   }
 
   set(key, val) {
-    for (var i = 0; i < this._res.length; i++) {
-      if (this._res[i].key === key) {
-        this._res[i].val === val
+    for (var i = 0; i < this._keys.length; i++) {
+      if (key === this._keys[i]) {
+        this._vals[i] === val
+        return this
       }
     }
 
-    this._res.push({ key: key, val: val })
+    this._keys.push(key)
+    this._vals.push(val)
+    this._size++
     return this
   }
 
   get(key) {
-    for (var i = 0; i < this._res.length; i++) {
-      if (this._res[i].key === key) {
-        return this._res[i].val
+    for (var i = 0; i < this._keys.length; i++) {
+      if (key === this._keys[i]) {
+        return this._vals[i]
       }
     }
     return undefined
@@ -155,8 +159,8 @@ class MyMap {
   }
 
   delete(key) {
-    for (var i = 0; i < this._res.length; i++) {
-      if (this._res[i].key === key) {
+    for (var i = 0; i < this._keys.length; i++) {
+      if (key === this._keys[i]) {
         this._res.splice(i, 1)
         return true
       }
