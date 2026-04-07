@@ -20,15 +20,15 @@ class Vector {
     this.y = y
   }
 
-  plus(c) {
-    var x = this.x + c.x
-    var y = this.y + c.y
+  plus(v) {
+    var x = this.x + v.x
+    var y = this.y + v.y
     return new Vector(x, y)
   }
 
-  minus(d) {
-    var x = this.x - d.x
-    var y = this.y - d.y
+  minus(v) {
+    var x = this.x - v.x
+    var y = this.y - v.y
     return new Vector(x, y)
   }
 }
