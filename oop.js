@@ -161,7 +161,9 @@ class MyMap {
   delete(key) {
     for (var i = 0; i < this._keys.length; i++) {
       if (key === this._keys[i]) {
-        this._res.splice(i, 1)
+        this._keys.splice(i, 1)
+        this._vals.splice(i, 1)
+        this._size--
         return true
       }
     }
