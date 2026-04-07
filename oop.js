@@ -19,17 +19,18 @@ class Vector {
     this.x = x
     this.y = y
   }
-
   plus(v) {
     var x = this.x + v.x
     var y = this.y + v.y
     return new Vector(x, y)
   }
-
   minus(v) {
     var x = this.x - v.x
     var y = this.y - v.y
     return new Vector(x, y)
+  }
+  get length() {
+    return Math.sqrt(this.x * this.x + this.y * this.y)
   }
 }
 
