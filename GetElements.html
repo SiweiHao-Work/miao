@@ -1,0 +1,36 @@
+<script>
+  function GetElementsByTagName(node, tagName) {
+    var result = []
+
+    // tagName = tagName.toLowerCase()
+
+    if (node.nodeType !== 1) {
+      return []
+    }
+
+    if (node.tagName.toLowerCase() === tagName) {
+      result.push(node)
+    }
+
+    for (var i = 0; i < node.childNodes.length; i++) {
+      var childResult = GetElementsByTagName(node.childNodes[i], tagName)
+      result = result.concat(childResult)
+    }
+    return result
+  }
+
+  function GetElementById(node, Id) {
+    if (node.id === Id) {
+      return node
+    }
+
+    for (var i = 0; i < node.childNodes.length; i++) {
+      var res = GetElementById(node.childNodes[i], Id)
+      if (res) {
+        return res
+      }
+    }
+    return null
+  }
+
+</script>
